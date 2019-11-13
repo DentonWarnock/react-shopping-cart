@@ -18,7 +18,7 @@ function App() {
 	const addItem = item => {
 		// add the given item to the cart	
 		console.log("dw: App.js: addItem: item: ", item);	
-		setCart(item);
+		setCart([...cart, item]);
 		console.log("dw: App.js: addItem: cart: ", cart);
 	};
 
