@@ -22,9 +22,14 @@ function App() {
 		console.log("dw: App.js: addItem: cart: ", cart);
 	};
 
+	const removeItem = item => {
+		setCart(cart.filter(i => i.id !== item))
+		console.log("dw: App.js: removeItem: cart: ", cart);
+	}
+
 	return (
 		<ProductContext.Provider value={{ products, addItem }} >
-			<CartContext.Provider value={{ cart }} >
+			<CartContext.Provider value={{ cart, removeItem }} >
 				<div className="App">
 					<Navigation />
 					{/* Routes */}
